@@ -2,6 +2,7 @@
 Homework №2.
 
 Tasks 01-10
+
 """
 
 # task 01 == Виправте синтаксичні помилки
@@ -24,15 +25,15 @@ apples = 2
 banana = apples * 4
 
 # task 05 == виправте назви змінних
-storona1 = 1
-storona2 = 2
-storona3 = 3
-storona4 = 4
+side_first = 1
+side_second = 2
+side_third = 3
+side_fourth = 4
 
 # task 06 == Порахуйте периметр фігури з task 05
 # та виведіть його для користувача
-perimetery = storona1 + storona2 + storona3 + storona4
-print(perimetery)
+perimeter = side_first + side_second + side_third + side_fourth
+print(perimeter)
 
 
 """
