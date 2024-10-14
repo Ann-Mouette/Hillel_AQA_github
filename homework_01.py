@@ -48,12 +48,22 @@ print(perimeter)
 Скільки всього дерев посадили в саду?
 """
 
+apples = 4
+pears = apples + 5
+plums = apples - 2
+trees = apples + pears + plums
+print(trees)
+
 # task 08
 """
 До обіда температура повітря була на 5 градусів вище нуля.
 Після обіду температура опустилася на 10 градусів.
 Надвечір потепліло на 4 градуси. Яка температура надвечір?
 """
+morning_t = 5
+midday_t = morning_t - 10
+evening_t = midday_t + 4
+print(evening_t)
 
 # task 09
 """
@@ -61,6 +71,12 @@ print(perimeter)
 1 хлопчик захворів та 2 дівчинки не прийшли сьогодні.
 Скількі сьогодні дітей у театральному гуртку?
 """
+theater_boys = 24
+theater_girls = theater_boys / 2
+sick_theater_boys = 1
+absent_theater_girls = 2
+today_theater_children = int(theater_boys + theater_girls - sick_theater_boys - absent_theater_girls)
+print(today_theater_children)
 
 # task 10
 """
@@ -68,3 +84,8 @@ print(perimeter)
 а третя - як половина вартості першої та другої разом.
 Скільки будуть коштувати усі книги, якщо купити по одному примірнику?
 """
+book_one_price = 8
+book_two_price = book_one_price + 2
+book_three_price = (book_one_price + book_two_price) / 2
+total_price = int(book_one_price + book_two_price + book_three_price)
+print(total_price)
