@@ -5,23 +5,23 @@ Tasks 01-10
 """
 
 # task 01 == Виправте синтаксичні помилки
-print("Hello", end = " ")
-print("world!")
+print('Hello', end = ' ')
+print('world!')
 
 # task 02 == Виправте синтаксичні помилки
-hello = "Hello"
-world = "world"
+hello = 'Hello'
+world = 'world'
 if True:
-    print(f"{hello} {world}!")
+    print(f'{hello} {world}!')
 
 # task 03  == Вcтавте пропущену змінну у ф-цію print
-for letter in "Hello world!":
+for letter in 'Hello world!':
     print(letter)
 
 # task 04 == Зробіть так, щоб кількість бананів була
 # завжди в чотири рази більша, ніж яблук
 apples = 2
-banana = apples*4
+banana = apples * 4
 
 # task 05 == виправте назви змінних
 storona1 = 1
