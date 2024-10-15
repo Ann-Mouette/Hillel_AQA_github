@@ -6,7 +6,7 @@ Tasks 01-10
 """
 
 # task 01 == Виправте синтаксичні помилки
-print('Hello', end = ' ')
+print('Hello', end=' ')
 print('world!')
 
 # task 02 == Виправте синтаксичні помилки
@@ -71,12 +71,12 @@ print(evening_t)
 1 хлопчик захворів та 2 дівчинки не прийшли сьогодні.
 Скількі сьогодні дітей у театральному гуртку?
 """
-theater_boys = 24
-theater_girls = theater_boys / 2
-sick_theater_boys = 1
-absent_theater_girls = 2
-today_theater_children = int(theater_boys + theater_girls - sick_theater_boys - absent_theater_girls)
-print(today_theater_children)
+boys = 24
+girls = boys / 2
+sick_boys = 1
+absent_girls = 2
+today_children = int(boys + girls - sick_boys - absent_girls)
+print(today_children)
 
 # task 10
 """
