@@ -3,7 +3,20 @@ Homework №3.
 
 Tasks 01-10.
 """
-alice_in_wonderland = '"Would you tell me, please, which way I ought to go from here?" \n"That depends a good deal on where you want to get to," said the Cat.\n"I don't much care where ——" said Alice.\n"Then it doesn't matter which way you go," said the Cat.\n"—— so long as I get somewhere," Alice added as an explanation.\n"Oh, you're sure to do that," said the Cat, "if you only walk long enough."'
+alice_in_wonderland = ('"Would you tell me, please, which way I '
+                       'ought to go from here?"\n'
+                       '"That depends a good deal on where you want '
+                       'to get to," said the Cat.\n'
+                       '"I don\'t much care where '
+                       '——" said Alice."\n'
+                       '"Then it doesn\'t matter which way you '
+                       'go," said the Cat.\n'
+                       '"—— so long as I get somewhere," Alice '
+                       'added as an explanation.\n'
+                       '"Oh, you\'re sure to do that," said '
+                       'the Cat, "if you only walk long enough."')
+print(alice_in_wonderland)
+
 # task 01 == Розділіть змінну alice_in_wonderland так, щоб вона займала декілька фізичних лінії
 # task 02 == Знайдіть та відобразіть всі символи одинарної лапки (') у тексті
 # task 03 == Виведіть змінну alice_in_wonderland на друк
