@@ -17,7 +17,8 @@ alice_in_wonderland = ('"Would you tell me, please, which way I '
                        'the Cat, "if you only walk long enough."')
 print(alice_in_wonderland)
 
-# task 01 == Розділіть змінну alice_in_wonderland так, щоб вона займала декілька фізичних лінії
+# task 01 == Розділіть змінну alice_in_wonderland так, щоб вона займала
+# декілька фізичних лінії
 # task 02 == Знайдіть та відобразіть всі символи одинарної лапки (') у тексті
 # task 03 == Виведіть змінну alice_in_wonderland на друк
 
@@ -34,7 +35,10 @@ print(alice_in_wonderland)
 моря становить 37 800 км2. Яку площу займають Чорне та Азов-
 ське моря разом?
 """
-
+black_sea_area = 436402
+azov_sea_area = 37800
+combined_sea_area = black_sea_area + azov_sea_area
+print(combined_sea_area, 'km')
 
 # task 05
 """
@@ -43,6 +47,11 @@ print(alice_in_wonderland)
 250 449 товарів. На другому та третьому – 222 950 товарів.
 Знайдіть кількість товарів, що розміщені на кожному складі.
 """
+all_stock = 375291
+first_stock = (all_stock - 222950)
+third_stock = (all_stock - 250449)
+second_stock = all_stock - (first_stock + third_stock)
+print(str(first_stock) + ', ' + str(second_stock) + ', ' + str(third_stock))
 
 
 # task 06
@@ -52,7 +61,8 @@ print(alice_in_wonderland)
 вати необхідно буде півтора року по 1179 грн/місяць. Обчисліть
 вартість комп’ютера.
 """
-
+laptop_cost = (12 + 12 / 2) * 1179
+print(laptop_cost, 'uah')
 
 # task 07
 """
@@ -61,7 +71,12 @@ a) 8019 : 8     d) 7248 : 6
 b) 9907 : 9     e) 7128 : 5
 c) 2789 : 5     f) 19224 : 9
 """
-
+print(8019 % 8)
+print(9907 % 9)
+print(2789 % 5)
+print(7248 % 6)
+print(7128 % 5)
+print(19224 % 9)
 
 # task 08
 """
@@ -75,7 +90,13 @@ c) 2789 : 5     f) 19224 : 9
 Торт            1           350 грн
 Вода            3           21 грн
 """
-
+pizza_big = 4 * 274
+pizza_middle = 2 * 218
+juice = 4 * 35
+cake = 1 * 350
+water = 3 * 21
+total_cost = pizza_big + pizza_middle + juice + cake + water
+print(total_cost, 'uah')
 
 # task 09
 """
@@ -84,7 +105,8 @@ c) 2789 : 5     f) 19224 : 9
 розміщено щонайбільше 8 фото. Скільки сторінок знадобиться
 Ігорю, щоб вклеїти всі фото?
 """
-
+pages_for_photo = 232 / 8
+print(pages_for_photo)
 
 # task 10
 """
@@ -97,3 +119,6 @@ c) 2789 : 5     f) 19224 : 9
 равку під час цієї подорожі, кожного разу заправляючи пов-
 ний бак?
 """
+petrol_for_trip = 1600 / 100 * 9
+stops = int(petrol_for_trip / 48)
+print('Petrol for trip:', petrol_for_trip, 'L, ' 'refueling stops:', stops)
