@@ -3,6 +3,8 @@ Homework №3.
 
 Tasks 01-10.
 """
+import math
+
 alice_in_wonderland = ('"Would you tell me, please, which way I '
                        'ought to go from here?"\n'
                        '"That depends a good deal on where you want '
@@ -120,5 +122,7 @@ print(pages_for_photo)
 ний бак?
 """
 petrol_for_trip = 1600 / 100 * 9
-stops = int(petrol_for_trip / 48)
+km_for_tank = (48 / 9) * 100
+stops = 1600 / km_for_tank
+stops = math.ceil(stops)
 print('Petrol for trip:', petrol_for_trip, 'L, ' 'refueling stops:', stops)
