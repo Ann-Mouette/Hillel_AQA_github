@@ -144,3 +144,134 @@ stock_2_3 = 222950
 
 result = calculate_goods_per_stock(all_stock, stock_1_2, stock_2_3)
 print(result)
+
+
+# task 8
+# Exists some car data with color, year, engine_volume, car type , price
+# We have search_criteria as tuple of ( year>= , engine_volume >= , price<=)
+# write code that will help us to get cars that satisfy search_criteria.
+# Cars should be sorted by price ascending.
+# We should print up to five (5) first found elements
+"""car_data = {
+    'Mercedes': ('silver', 2019, 1.8, 'sedan', 50000),
+    'Audi': ('black', 2020, 2.0, 'sedan', 55000),
+    'BMW': ('white', 2018, 3.0, 'suv', 70000),
+    'Lexus': ('gray', 2016, 2.5, 'coupe', 45000),
+    'Toyota': ('blue', 2021, 1.6, 'hatchback', 25000),
+    'Honda': ('red', 2017, 1.5, 'sedan', 30000),
+    'Ford': ('green', 2019, 2.3, 'suv', 40000),
+    'Chevrolet': ('purple', 2020, 1.4, 'hatchback', 22000),
+    'Nissan': ('pink', 2018, 1.8, 'sedan', 35000),
+    'Volkswagen': ('brown', 2021, 1.4, 'hatchback', 28000),
+    'Hyundai': ('gray', 2019, 1.6, 'suv', 32000),
+    'Kia': ('white', 2020, 2.0, 'sedan', 28000),
+    'Volvo': ('silver', 2017, 1.8, 'suv', 45000),
+    'Subaru': ('blue', 2018, 2.5, 'wagon', 35000),
+    'Mazda': ('red', 2019, 2.5, 'sedan', 32000),
+    'Porsche': ('black', 2017, 3.0, 'coupe', 80000),
+    'Jeep': ('green', 2021, 3.0, 'suv', 50000),
+    'Chrysler': ('gray', 2016, 2.4, 'sedan', 22000),
+    'Dodge': ('yellow', 2020, 3.6, 'suv', 40000),
+    'Ferrari': ('red', 2019, 4.0, 'coupe', 500000),
+    'Lamborghini': ('orange', 2021, 5.0, 'coupe', 800000),
+    'Maserati': ('blue', 2018, 4.7, 'coupe', 100000),
+    'Bugatti': ('black', 2020, 8.0, 'coupe', 2000000),
+    'McLaren': ('yellow', 2017, 4.0, 'coupe', 700000),
+    'Rolls-Royce': ('white', 2019, 6.8, 'sedan', 500000),
+    'Bentley': ('gray', 2020, 4.0, 'coupe', 300000),
+    'Jaguar': ('red', 2016, 2.0, 'suv', 40000),
+    'Land Rover': ('green', 2018, 3.0, 'suv', 60000),
+    'Tesla': ('silver', 2020, 0.0, 'sedan', 60000),
+    'Acura': ('white', 2017, 2.4, 'suv', 40000),
+    'Cadillac': ('black', 2019, 3.6, 'suv', 55000),
+    'Infiniti': ('gray', 2018, 2.0, 'sedan', 35000),
+    'Lincoln': ('white', 2021, 2.0, 'suv', 50000),
+    'GMC': ('blue', 2016, 1.5, 'pickup', 30000),
+    'Ram': ('black', 2019, 5.7, 'pickup', 40000),
+    'Chevy': ('red', 2017, 2.4, 'pickup', 35000),
+    'Dodge Ram': ('white', 2020, 3.6, 'pickup', 45000),
+    'Ford F-Series': ('gray', 2021, 3.5, 'pickup', 50000),
+    'Nissan Titan': ('silver', 2018, 5.6, 'pickup', 35000),
+}
+info = (2017, 1.6, 36000)
+"""
+def find_cars_by_criteria(car_data, criteria):
+    """
+    Filters and retrieves cars from car_data that meet the search_criteria.
+
+    Parameters:
+    car_data (dict): A dictionary where the keys are car names and values are tuples containing
+                     (color, year, volume, type, price).
+    criteria (tuple): A tuple containing criteria as (year_min, volume_min, price_max).
+                             - year_min (int): Minimum year the car should be.
+                             - volume_min (float): Minimum engine volume the car should have.
+                             - price_max (int): Maximum price the car should have.
+
+    Returns:
+    list: A list of up to 5 car names that match the criteria, sorted by price in ascending order.
+    """
+
+    year_min, volume_min, price_max = criteria
+
+    # filter cars that meet the criteria
+    matching_cars = [
+        (name, details[4])  # save the name of the car and its price for sorting
+        for name, details in car_data.items()
+        if details[1] >= year_min and details[2] >= volume_min and details[4] <= price_max
+    ]
+
+    # sort the filtered cars by price in ascending order
+    matching_cars.sort(key=lambda car: car[1])
+
+    # return up to 5 cars that meet the criteria
+    return [name for name, _ in matching_cars[:5]]
+
+
+
+# Example
+car_data = {
+    'Mercedes': ('silver', 2019, 1.8, 'sedan', 50000),
+    'Audi': ('black', 2020, 2.0, 'sedan', 55000),
+    'BMW': ('white', 2018, 3.0, 'suv', 70000),
+    'Lexus': ('gray', 2016, 2.5, 'coupe', 45000),
+    'Toyota': ('blue', 2021, 1.6, 'hatchback', 25000),
+    'Honda': ('red', 2017, 1.5, 'sedan', 30000),
+    'Ford': ('green', 2019, 2.3, 'suv', 40000),
+    'Chevrolet': ('purple', 2020, 1.4, 'hatchback', 22000),
+    'Nissan': ('pink', 2018, 1.8, 'sedan', 35000),
+    'Volkswagen': ('brown', 2021, 1.4, 'hatchback', 28000),
+    'Hyundai': ('gray', 2019, 1.6, 'suv', 32000),
+    'Kia': ('white', 2020, 2.0, 'sedan', 28000),
+    'Volvo': ('silver', 2017, 1.8, 'suv', 45000),
+    'Subaru': ('blue', 2018, 2.5, 'wagon', 35000),
+    'Mazda': ('red', 2019, 2.5, 'sedan', 32000),
+    'Porsche': ('black', 2017, 3.0, 'coupe', 80000),
+    'Jeep': ('green', 2021, 3.0, 'suv', 50000),
+    'Chrysler': ('gray', 2016, 2.4, 'sedan', 22000),
+    'Dodge': ('yellow', 2020, 3.6, 'suv', 40000),
+    'Ferrari': ('red', 2019, 4.0, 'coupe', 500000),
+    'Lamborghini': ('orange', 2021, 5.0, 'coupe', 800000),
+    'Maserati': ('blue', 2018, 4.7, 'coupe', 100000),
+    'Bugatti': ('black', 2020, 8.0, 'coupe', 2000000),
+    'McLaren': ('yellow', 2017, 4.0, 'coupe', 700000),
+    'Rolls-Royce': ('white', 2019, 6.8, 'sedan', 500000),
+    'Bentley': ('gray', 2020, 4.0, 'coupe', 300000),
+    'Jaguar': ('red', 2016, 2.0, 'suv', 40000),
+    'Land Rover': ('green', 2018, 3.0, 'suv', 60000),
+    'Tesla': ('silver', 2020, 0.0, 'sedan', 60000),
+    'Acura': ('white', 2017, 2.4, 'suv', 40000),
+    'Cadillac': ('black', 2019, 3.6, 'suv', 55000),
+    'Infiniti': ('gray', 2018, 2.0, 'sedan', 35000),
+    'Lincoln': ('white', 2021, 2.0, 'suv', 50000),
+    'GMC': ('blue', 2016, 1.5, 'pickup', 30000),
+    'Ram': ('black', 2019, 5.7, 'pickup', 40000),
+    'Chevy': ('red', 2017, 2.4, 'pickup', 35000),
+    'Dodge Ram': ('white', 2020, 3.6, 'pickup', 45000),
+    'Ford F-Series': ('gray', 2021, 3.5, 'pickup', 50000),
+    'Nissan Titan': ('silver', 2018, 5.6, 'pickup', 35000),
+}
+criteria = (2017, 1.6, 36000)
+
+
+result = find_cars_by_criteria(car_data, criteria)
+print(result)
