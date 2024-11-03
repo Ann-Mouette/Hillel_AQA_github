@@ -7,17 +7,32 @@ Tasks 1-10
 # task 1
 """ Задача - надрукувати табличку множення на задане число, але
 лише до максимального значення для добутку - 25.
-Код майже готовий, треба знайти помилки та випраавити\доповнити.
+Код майже готовий, треба знайти помилки та випраавити  або доповнити.
 """
+
+
 def multiplication_table(number):
+    """
+    Print the multiplication table for a given number.
+
+    Parameters:
+    number (int): The number for which the multiplication
+    table is generated.
+
+    Returns:
+    None: This function does not return a value;
+    it only prints each line of the multiplication table
+    until the product exceeds 25.
+    """
     # Initialize the appropriate variable
     multiplier = 1
     while True:
         result = number * multiplier
-        if  result > 25:
+        if result > 25:
             break
-        print(str(number) + "x" + str(multiplier) + "=" + str(result))
+        print(str(number) + 'x' + str(multiplier) + '=' + str(result))
         multiplier += 1
+
 
 multiplication_table(3)
 
@@ -25,17 +40,40 @@ multiplication_table(3)
 # task 2
 """  Написати функцію, яка обчислює суму двох чисел.
 """
+
+
 def count_sum(a, b):
+    """
+    Calculate the sum of two numbers and prints the result.
+
+    Parameters:
+    a (float or int): The first number.
+    b (float or int): The second number.
+
+    Returns:
+    None: This function does not return a value; it only prints the result.
+    """
     res = a + b
     print('Result:', res)
 
 
-count_sum(3,2)
+count_sum(3, 2)
 
 # task 3
 """  Написати функцію, яка розрахує середнє арифметичне списку чисел.
 """
+
+
 def count_average(numbers):
+    """
+    Calculate the arithmetic mean (average) of a list of numbers.
+
+    Parameters:
+    numbers (list of float or int): A list of numerical values.
+
+    Returns:
+    float: The arithmetic mean of the list. Returns 0 if the list is empty.
+    """
     if not numbers:
         return 0
     return sum(numbers) / len(numbers)
@@ -48,18 +86,44 @@ print(count_average(numbers))
 # task 4
 """  Написати функцію, яка приймає рядок та повертає його у зворотному порядку.
 """
+
+
 def reverse_string(text):
+    """
+    Reverse the given string.
+
+    Parameters:
+    text (str): The string to be reversed.
+
+    Returns:
+    str: The input string in reverse order.
+    """
     return text[::-1]
 
 
 # Example:
-text = "Hello"
+text = 'Hello'
 print(reverse_string(text))
 
 # task 5
-"""  Написати функцію, яка приймає список слів та повертає найдовше слово у списку.
+"""Написати функцію, яка приймає список слів та
+повертає найдовше слово у списку.
 """
+
+
 def find_longest_words(words):
+    """
+    Find the longest word(s) in a list of words.
+
+    Parameters:
+    words (list of str): A list of words to search for
+    the longest word.
+
+    Returns:
+    list of str: A list containing the longest word(s).
+    If multiple words have the same maximum length,
+    all such words are included in the returned list.
+    """
     longest_words = []
     max_length = 0
 
@@ -74,51 +138,77 @@ def find_longest_words(words):
 
 
 # Example:
-words = ["apple", "acer", "htc", "nokia"]
+words = ['apple', 'acer', 'htc', 'nokia']
 print(find_longest_words(words))
 
 # task 6
-"""  Написати функцію, яка приймає два рядки та повертає індекс першого входження другого рядка
-у перший рядок, якщо другий рядок є підрядком першого рядка, та -1, якщо другий рядок
+"""Написати функцію, яка приймає два рядки та повертає
+індекс першого входження другого рядка
+у перший рядок, якщо другий рядок є підрядком першого
+рядка, та -1, якщо другий рядок
 не є підрядком першого рядка."""
+
+
 def find_substring(string_main, substring):
+    """
+    Return the index of the 1st occurrence of a substring within a string.
+
+    This function searches for the specified substring within the main string.
+    If the substring is found, the function returns the index of
+    its first occurrence.
+    If the substring is not found, the function returns -1.
+
+    Parameters:
+    string_main (str): The main string in which to search for the substring.
+    substring (str): The substring to find within the main string.
+
+    Returns:
+    int: The index of the first occurrence of the substring if found,
+    otherwise -1.
+    """
     return string_main.find(substring)
 
-string_main = "I like broccoli and cilantro!"
-substring = "broccoli"
-print(find_substring(string_main, substring)) #return: 7
 
-str1 = "Lorem ipsum dolor sit amet, consectetur adipiscing"
-str2 = "Fusce quis"
-print(find_substring(str1, str2)) #return: -1
+string_main = 'I like broccoli and cilantro!'
+substring = 'broccoli'
+print(find_substring(string_main, substring))
+
+str1 = 'Lorem ipsum dolor sit amet, consectetur adipiscing'
+str2 = 'Fusce quis'
+print(find_substring(str1, str2))
 
 # task 7
 # task 8
 # task 9
 # task 10
-"""  Оберіть будь-які 4 таски з попередніх домашніх робіт та
-перетворіть їх у 4 функції, що отримують значення та повертають результат.
+"""Оберіть будь-які 4 таски з попередніх домашніх робіт та
+перетворіть їх у 4 функції, що отримують значення
+та повертають результат.
 Обоязково документуйте функції та дайте зрозумілі імена змінним.
 """
 
 # task 7
-"""
-Мережа супермаркетів має 3 склади, де всього розміщено
+"""Мережа супермаркетів має 3 склади, де всього розміщено
 375 291 товар. На першому та другому складах перебуває
 250 449 товарів. На другому та третьому – 222 950 товарів.
 Знайдіть кількість товарів, що розміщені на кожному складі.
 """
+
+
 def calculate_goods_per_stock(all_stock, stock_1_2, stock_2_3):
     """
-    Calculates the number of goods in each of the warehouses.
+    Calculate the number of goods in each of the warehouses.
 
     Parameters:
     all_stock (int): The total number of goods in three warehouses.
-    stock_1_2 (int): The number of goods in the first and second warehouses together.
-    stock_2_3 (int): The number of goods in the second and third warehouses together.
+    stock_1_2 (int): The number of goods in the first
+    and second warehouses together.
+    stock_2_3 (int): The number of goods in the second
+    and third warehouses together.
 
     Returns:
-    dict: dictionary with the number of goods in each warehouse (keys: 'stock one', 'stock two', 'stock three').
+    dict: dictionary with the number of goods in
+    each warehouse (keys: 'stock one', 'stock two', 'stock three').
     """
     # Number of goods in the third warehouse:
     stock_3 = all_stock - stock_1_2
@@ -133,7 +223,7 @@ def calculate_goods_per_stock(all_stock, stock_1_2, stock_2_3):
     return {
         'stock one': stock_1,
         'stock two': stock_2,
-        'stock three': stock_3
+        'stock three': stock_3,
     }
 
 
@@ -195,29 +285,33 @@ car_data = {
 }
 info = (2017, 1.6, 36000)
 """
+
+
 def find_cars_by_criteria(car_data, criteria):
     """
-    Filters and retrieves cars from car_data that meet the search_criteria.
+    Filter and retrieve cars from car_data that meet the search_criteria.
 
     Parameters:
-    car_data (dict): A dictionary where the keys are car names and values are tuples containing
-                     (color, year, volume, type, price).
-    criteria (tuple): A tuple containing criteria as (year_min, volume_min, price_max).
-                             - year_min (int): Minimum year the car should be.
-                             - volume_min (float): Minimum engine volume the car should have.
-                             - price_max (int): Maximum price the car should have.
+    car_data (dict): A dictionary where the keys are
+    car names and values are tuples containing
+    (color, year, volume, type, price).
+    criteria (tuple): A tuple containing criteria
+    as (year_min, volume_min, price_max).
+    - year_min (int): Minimum year the car should be.
+    - volume_min (float): Minimum engine volume the car should have.
+    - price_max (int): Maximum price the car should have.
 
     Returns:
-    list: A list of up to 5 car names that match the criteria, sorted by price in ascending order.
+    list: A list of up to 5 car names that match
+    the criteria, sorted by price in ascending order.
     """
-
-    year_min, volume_min, price_max = criteria
+    year, volume, price = criteria
 
     # filter cars that meet the criteria
     matching_cars = [
-        (name, details[4])  # save the name of the car and its price for sorting
+        (name, details[4])
         for name, details in car_data.items()
-        if details[1] >= year_min and details[2] >= volume_min and details[4] <= price_max
+        if details[1] >= year and details[2] >= volume and details[4] <= price
     ]
 
     # sort the filtered cars by price in ascending order
@@ -225,7 +319,6 @@ def find_cars_by_criteria(car_data, criteria):
 
     # return up to 5 cars that meet the criteria
     return [name for name, _ in matching_cars[:5]]
-
 
 
 # Example
@@ -277,26 +370,52 @@ result = find_cars_by_criteria(car_data, criteria)
 print(result)
 
 
-#Task 9
-"""Порахувати кількість унікальних символів в строці. 
-Якщо їх більше 10 - вивести в консоль True, інакше - False. 
+# Task 9
+"""Порахувати кількість унікальних символів в строці.
+Якщо їх більше 10 - вивести в консоль True, інакше - False.
 Строку отримати за допомогою функції input()
 """
+
+
 def has_more_than_ten_unique_characters():
     """
-    Counts the number of unique characters in an input string.
+    Count the number of unique characters in an input string.
 
-    Prompts the user to enter a string and checks if it has more than 10 unique characters.
+    Prompts the user to enter a string and checks if
+    it has more than 10 unique characters.
 
     Returns:
-    bool: True if the number of unique characters is greater than 10, otherwise False.
+    bool: True if the number of unique characters is
+    greater than 10, otherwise False.
     """
-    user_input = input("Please enter some string: ")
+    user_input = input('Please enter some string: ')
     unique_characters = set(user_input)
     return len(unique_characters) > 10
 
 
-
 print(has_more_than_ten_unique_characters())
 
-#Task 10
+
+# Task 10
+"""
+Є ліст з числами, порахуйте сумму усіх ПАРНИХ чисел в цьому лісті
+"""
+
+
+def sum_of_even_numbers_in_range(start, end):
+    """
+    Calculate the sum of even numbers in a range.
+
+    Parameters:
+    start (int): The starting number of the range.
+    end (int): The ending number of the range.
+
+    Returns:
+    int: The sum of all even numbers in the specified range.
+    """
+    numbers = list(range(start, end + 1))
+    return sum(num for num in numbers if num % 2 == 0)
+
+
+# Example
+print(sum_of_even_numbers_in_range(1, 10))
