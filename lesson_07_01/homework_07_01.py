@@ -147,12 +147,12 @@ print(result)
 
 
 # task 8
-# Exists some car data with color, year, engine_volume, car type , price
-# We have search_criteria as tuple of ( year>= , engine_volume >= , price<=)
-# write code that will help us to get cars that satisfy search_criteria.
-# Cars should be sorted by price ascending.
-# We should print up to five (5) first found elements
-"""car_data = {
+"""Exists some car data with color, year, engine_volume, car type , price
+We have search_criteria as tuple of ( year>= , engine_volume >= , price<=)
+write code that will help us to get cars that satisfy search_criteria.
+Cars should be sorted by price ascending.
+We should print up to five (5) first found elements
+car_data = {
     'Mercedes': ('silver', 2019, 1.8, 'sedan', 50000),
     'Audi': ('black', 2020, 2.0, 'sedan', 55000),
     'BMW': ('white', 2018, 3.0, 'suv', 70000),
@@ -275,3 +275,28 @@ criteria = (2017, 1.6, 36000)
 
 result = find_cars_by_criteria(car_data, criteria)
 print(result)
+
+
+#Task 9
+"""Порахувати кількість унікальних символів в строці. 
+Якщо їх більше 10 - вивести в консоль True, інакше - False. 
+Строку отримати за допомогою функції input()
+"""
+def has_more_than_ten_unique_characters():
+    """
+    Counts the number of unique characters in an input string.
+
+    Prompts the user to enter a string and checks if it has more than 10 unique characters.
+
+    Returns:
+    bool: True if the number of unique characters is greater than 10, otherwise False.
+    """
+    user_input = input("Please enter some string: ")
+    unique_characters = set(user_input)
+    return len(unique_characters) > 10
+
+
+
+print(has_more_than_ten_unique_characters())
+
+#Task 10
