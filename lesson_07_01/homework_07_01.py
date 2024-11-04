@@ -53,8 +53,12 @@ def count_sum(a, b):
     Returns:
     None: This function does not return a value; it only prints the result.
     """
-    res = a + b
-    print('Result:', res)
+    return a + b
+
+
+# Example
+result = count_sum(3, 2)
+print('Result:', result)
 
 
 count_sum(3, 2)
@@ -124,15 +128,8 @@ def find_longest_words(words):
     If multiple words have the same maximum length,
     all such words are included in the returned list.
     """
-    longest_words = []
-    max_length = 0
-
-    for word in words:
-        if len(word) > max_length:
-            max_length = len(word)
-            longest_words = [word]
-        elif len(word) == max_length:
-            longest_words.append(word)
+    max_length = len(max(words, key=len))
+    longest_words = [word for word in words if len(word) == max_length]
 
     return longest_words
 
