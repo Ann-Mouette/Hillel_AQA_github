@@ -24,7 +24,7 @@ ex. d1.get(key, 0)
 
 def merge_lists(list1, list2):
     """
-    Merge two lists.
+    Merge two lists into list of tuples.
 
     Parameters:
     list1 (list): The first list of elements.
